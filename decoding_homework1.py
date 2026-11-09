@@ -1,7 +1,8 @@
 text = str(input("Enter the text: "))
 result = ""
-for i in range (0,len(text), 2):
-    char = text[i]
-    count = int(text[i+1])
-    result += char * count
+for i, symbol in enumerate(text):
+    if i.isalpha():
+        symbol = text[i]
+        count = int(text[i+1])
+        result += symbol * count
 print(result)
